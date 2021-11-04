@@ -25,6 +25,8 @@ const service = require("../services/entries.service")
 
 //GET
 route.get("/", service.find)
+
+route.get("/:id", service.getOne)
 //INSERT
 route.post("/", service.insert)
 //UPDATE
@@ -32,6 +34,13 @@ route.put("/:id", service.update)
 //DELETE
 route.delete("/:id", service.delete)
 
-route.get("/findweekly/:week/:month/:year",service.findWeekly)
+//  GET WEEKLY ENTRIES
+route.get("/find/:week/:month/:year",service.findWeekly)
+
+//GET MONTHLY ENTRIES
+route.get("/find/:month/:year",service.findMonthly)
+
+//GET YEARLY ENTRIES
+route.get("/find/:year",service.findYearly)
 
 module.exports = route;
