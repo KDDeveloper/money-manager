@@ -21,7 +21,7 @@ class Yearly extends React.Component{
 
     getPost= async () => {
         try{
-            const {data} = await axios.get('http://localhost:3001/entries');
+            const {data} = await axios.get('https://kd-money-manager-backend.herokuapp.com/entries');
             this.setState({entries:data});    
             console.log(this.state.entries)        
         }
