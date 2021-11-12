@@ -35,7 +35,7 @@ class AddEntry extends React.Component{
     
     getPost= async () => {
         try{
-            const {data} = await axios.get('http://localhost:3001/entries');
+            const {data} = await axios.get('https://kd-money-manager-backend.herokuapp.com/entries');
             this.setState({posts:data});
             console.log(this.state.posts)
         }
@@ -54,7 +54,7 @@ class AddEntry extends React.Component{
             // const day = this.state.date.day
             // const month = this.state.date.month
             // const year = this.state.date.year
-            const {data:post} = await axios.post('http://localhost:3001/entries',{    
+            const {data:post} = await axios.post('https://kd-money-manager-backend.herokuapp.com/entries',{    
                 date,    
                 day,
                 month,
