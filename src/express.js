@@ -1,7 +1,7 @@
 const express = require("express");
 const mongo = require("./services/mongo");
 const entriesRoutes = require("./route/entries.route");
-const PORT = 3001;
+const PORT = process.env.PORT||3001;
 const app= express();
 const cors = require("cors");
 
@@ -24,7 +24,9 @@ const cors = require("cors");
   app.use("/entries",entriesRoutes);
   
   
-  
+//   if(process.env.NODE_ENV==='production'){
+
+//   }
   app.listen(PORT,()=>{console.log(`server is running at post:${PORT}`)});
   }
   catch(err){
