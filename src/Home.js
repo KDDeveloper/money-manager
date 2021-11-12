@@ -22,7 +22,7 @@ class Home extends React.Component{
     }
 
     getRecentEntries = async () => {
-        let {data} = await axios.get('http://localhost:3001/entries');
+        let {data} = await axios.get('https://kd-money-manager-backend.herokuapp.com/entries');
         this.setState({entries:data});
         console.log(this.state.entries);
     }
