@@ -159,9 +159,9 @@ body{
 }
 
 .add-form svg{
-    position: absolute;
-    left:170vh;
-    top:15vh;
+    position: relative;
+    left:58vh;
+    top:-28vh;
     fill: white;
 }
 
@@ -287,4 +287,23 @@ body{
     .nav-options{
         width: 50%;
     }  
+
+    .add-form form {
+        height: 300px;
+        width: 300px;
+        font-size: 12px; 
+    }
+
+    .add-form svg{
+        position: relative;
+        left:40vh;
+        top:-28vh;
+        fill: white;
+    }
+}
+
+@media screen and (max-width:400px){
+    .home h1{
+        width: 340px;
+    }
 }
